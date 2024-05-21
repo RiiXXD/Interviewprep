@@ -1,0 +1,41 @@
+.app {
+  font-family: sans-serif;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.time {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button {
+  font-size: 24px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.button-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.button-primary-active {
+  background-color: #d9534f;
+}
+
+.button-primary-inactive {
+  background-color: #007bff;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
