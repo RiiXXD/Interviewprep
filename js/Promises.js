@@ -1,3 +1,13 @@
+//what is promises?
+//Promises are objects in JavaScript used for asynchronous operations.
+//They represent a value that might be available now, or in the future,
+//or never. Promises have three states: pending, fulfilled, or rejected.
+//When you create a new Promise, you provide it with an executor function
+//which takes two arguments, resolve and reject. Inside this function,
+//you perform your asynchronous operation. If the operation is successful,
+//you call resolve with the result, and if it fails, you call reject with
+//an error."
+
 // How do you handle the result or error from a Promise?
 function fetchData() {
   const promise = new Promise((resolve, reject) => {
@@ -19,7 +29,9 @@ fetchData()
     console.log(err);
   });
 
-//   How would you handle multiple asynchronous operations with Promises, ensuring that all operations complete successfully before proceeding
+//How would you handle multiple asynchronous operations
+// with Promises, ensuring that all operations complete
+// successfully before proceeding
 
 const fetchUrl = (url) => {
   const promise = new Promise((resolve, reject) => {

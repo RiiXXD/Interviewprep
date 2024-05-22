@@ -1,0 +1,117 @@
+/* What are Pseudo-classes?
+Pseudo-classes are keywords that are added to selectors
+to style elements based on their state or position in the 
+document, such as :hover, :active, :first-child, etc. */
+/* Styles a link when hovered over */
+a:hover {
+  color: red;
+}
+
+/* Styles the first paragraph in a container */
+.container p:first-child {
+  font-weight: bold;
+}
+
+/* What are Pseudo-elements? */
+
+/* Pseudo-elements allow you to style specific parts of an element,
+ such as the first letter, first line, or adding content before or
+  after an element, without modifying the HTML structure. */
+
+/* Common Pseudo-elements:
+
+::before: Inserts content before the content of an element.
+::after: Inserts content after the content of an element.
+::first-line: Styles the first line of text within an element.
+::first-letter: Styles the first letter of text within an element.
+::selection: Styles the portion of text that is selected by the user. */
+
+/* Adds an arrow before every <li> element */
+a::before {
+  content: "→";
+}
+
+/* Styles the first letter of every paragraph */
+p::first-letter {
+  font-size: larger;
+  color: purple;
+}
+
+/* Animations use of keyframes */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100px);
+  }
+}
+
+.slide-in {
+  animation-name: slide;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: coral;
+  margin: 20px;
+  transition: transform 0.5s;
+}
+/* transformations */
+.translate {
+  transform: translate(50px, 100px);
+}
+.rotate {
+  transform: rotate(45deg);
+}
+.scale {
+  transform: scale(1.5);
+}
+.skew {
+  transform: skew(30deg, 20deg);
+}
+.combined {
+  transform: translate(50px, 100px) rotate(45deg) scale(1.5);
+}
+/* Elements with display: inline are laid out in a line, like text.
+ They do not start on a new line and only take up as much width as necessary. */
+/* Margin and padding are applied but do not affect the position of other elements; 
+ only horizontal margins and paddings affect the spacing. */
+/* Width and height properties have no effect.
+<span>, <a>, <strong>, <em> */
+.inline {
+  display: inline;
+  margin: 10px;
+  padding: 10px;
+  background-color: lightblue;
+}
+/* Elements with display: block start on a new line and take up the full width available
+ (100% of the parent element's width) by default.
+Margin, padding, width, and height properties are respected.
+Other block-level elements will also start on a new line after them.
+<div>, <p>, <h1> to <h6>, <section>, <article> */
+.block {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  width: 100px;
+  height: 50px;
+  background-color: lightgreen;
+}
+/* Elements with display: inline-block are laid out in a line, like inline elements,
+ but they respect width and height properties.
+Margin and padding affect the surrounding elements like block elements.
+Inline-block elements do not start on a new line, but you can control 
+their size with width and height properties. */
+.inline-block {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  width: 100px;
+  height: 50px;
+  background-color: lightcoral;
+}

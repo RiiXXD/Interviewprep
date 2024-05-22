@@ -1,3 +1,7 @@
+body {
+  background-color: cornflowerblue;
+  min-height: 100vh;
+}
 .app {
   font-family: sans-serif;
   text-align: center;
