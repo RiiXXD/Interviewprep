@@ -115,3 +115,138 @@ their size with width and height properties. */
   height: 50px;
   background-color: lightcoral;
 }
+
+.box2 {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: lightblue;
+}
+
+/* This is the default value for all elements.
+Elements are positioned according to the normal document flow.
+Top, right, bottom, and left properties have no effect. */
+.static {
+  position: static;
+}
+/* Elements are positioned relative to their normal position.
+Top, right, bottom, and left properties move the element from its normal position, without affecting other elements. */
+.relative {
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+.absolute-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background-color: lightgreen;
+}
+/* Elements are positioned relative to the nearest positioned ancestor (i.e., an ancestor with a position value other than static).
+If no such ancestor exists, it is positioned relative to the initial containing block (usually the viewport).
+The element is removed from the normal document flow, so it can overlap other elements. */
+.absolute {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+/* Elements are positioned relative to the viewport, 
+meaning they stay in the same place even when the page is scrolled.
+Like absolute, the element is removed from the normal document flow. */
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-color: lightcoral;
+}
+/* Elements are positioned based on the user's scroll position.
+The element toggles between relative and fixed positioning, depending on the scroll 
+position. It is positioned relative until a given offset position is met in the viewport, 
+then it "sticks" in place (like fixed). */
+
+.sticky {
+  position: sticky;
+  top: 10px;
+  background-color: lightyellow;
+}
+
+/* grow  shrink basis */
+.container {
+  display: flex;
+  background-color: lightgrey;
+}
+.item {
+  background-color: dodgerblue;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+}
+.fixed-size {
+  flex: 0 0 auto;
+}
+.flexible {
+  flex: 1 1 0;
+}
+/* styles.css */
+/* body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+} */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 100px);
+  gap: 10px;
+  width: 80%;
+  max-width: 600px;
+  background-color: lightgrey;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: dodgerblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border-radius: 5px;
+}
+
+.item1 {
+  grid-column: 1 / 2; /* start/end */
+  grid-row: 1 / 2;
+}
+
+.item2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.item3 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.item4 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.item5 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.item6 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
