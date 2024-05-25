@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
-
+import LifecycleDemo from "./Topics/ClassLifeCycleComponenet";
 function Timer() {
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
@@ -51,6 +51,7 @@ function Timer() {
           Reset
         </button>
       </div>
+      {/* <LifecycleDemo /> */}
     </div>
   );
 }
