@@ -1,0 +1,10 @@
+.container {
+  min-width: 100px;
+  padding: 10px;
+  text-align: center;
+}
+.active {
+  color: black;
+  background-color: rgba(244, 249, 255, 0.992);
+  border-radius: 20px;
+}

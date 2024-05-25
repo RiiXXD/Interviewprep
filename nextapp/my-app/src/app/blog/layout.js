@@ -6,3 +6,5 @@ const BlogLayout = ({ childern }) => {
     </>
   );
 };
+
+export default BlogLayout;
