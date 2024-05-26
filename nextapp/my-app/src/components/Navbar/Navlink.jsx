@@ -8,16 +8,14 @@ const Navlink = ({ items }) => {
   console.log(items.link == pathName);
 
   return (
-    <div>
-      <Link
-        className={`${styles.container} ${
-          pathName == items.link && styles.active
-        }`}
-        href={items.link}
-      >
-        {items.title}
-      </Link>
-    </div>
+    <Link
+      className={`${styles.container} ${
+        pathName == items.link && styles.active
+      } text-head-color`}
+      href={items.link}
+    >
+      {items.title}
+    </Link>
   );
 };
 

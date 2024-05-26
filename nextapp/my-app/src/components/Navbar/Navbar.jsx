@@ -8,16 +8,13 @@ const Navbar = () => {
     { link: "/blog", title: "Blog" },
   ];
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-      }}
-    >
-      {links.map((l) => {
-        return <Navlink items={l} />;
-      })}
+    <div className="flex justify-between p-2">
+      <h2>NEXT+TAILWIND</h2>
+      <div className="flex justify-between">
+        {links.map((l) => {
+          return <Navlink key={l.link} items={l} />;
+        })}
+      </div>
     </div>
   );
 };
