@@ -1,6 +1,9 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import LifecycleDemo from "./Topics/ClassLifeCycleComponenet";
+import Main from "./Topics/modal/Main";
+import VideoPlayer from "./Topics/ExampleuseRef/VideoPlayer";
+import ProgressBar from "./Topics/ProgressBar";
 function Timer() {
   const [seconds, setSeconds] = useState(0);
   const [isActive, setIsActive] = useState(false);
@@ -52,6 +55,9 @@ function Timer() {
         </button>
       </div>
       {/* <LifecycleDemo /> */}
+      <Main />
+      <VideoPlayer />
+      <ProgressBar />
     </div>
   );
 }
